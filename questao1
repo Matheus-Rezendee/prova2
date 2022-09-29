@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Questao1 {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-        int votos [] = new int[5];
+        
+        int votos [] = new int[1500];
+        
         int CandidatoX=0;
         int CandidatoY=0;
         int CandidatoZ=0;
@@ -16,7 +18,8 @@ public class Questao1 {
         int contadorZ=0;
         int contadorBrancos=0;
         int votosNulos=0;
-        for (int i=0;i<5;i++){
+        
+        for (int i=0;i<1500;i++){
             System.out.println("Digite 111 para votar no candidadoX");
             System.out.println("222 para votar no candidatoY");
             System.out.println("333 para votar no candidatoZ");

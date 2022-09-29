@@ -1,0 +1,54 @@
+  package br.edu.univas;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Questao1 {
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+        int votos [] = new int[5];
+        int CandidatoX=0;
+        int CandidatoY=0;
+        int CandidatoZ=0;
+        int branco=0;
+        int contadorX = 0;
+        int contadorY=0;
+        int contadorZ=0;
+        int contadorBrancos=0;
+        int votosNulos=0;
+        for (int i=0;i<5;i++){
+            System.out.println("Digite 111 para votar no candidadoX");
+            System.out.println("222 para votar no candidatoY");
+            System.out.println("333 para votar no candidatoZ");
+            System.out.println("ou 0 para votar em Branco");
+            votos [i] = leitura.nextInt();
+            if (votos[i]==111){
+                contadorX++;
+
+        } else if (votos[i]==222) {
+
+                contadorY++;
+
+            } else if (votos[i]==333) {
+
+                contadorZ++;
+
+            } else if (votos[i]==0) {
+
+                contadorBrancos++;
+
+            }else{
+
+                votosNulos++;
+            }
+            }
+        System.out.println("CandidatoX = " + contadorX + "voto(s)");
+        System.out.println("CandidatoY = " + contadorY + "voto(s)");
+        System.out.println("CandidatoZ = " + contadorZ + "voto(s)");
+        System.out.println("Votos em branco = " + contadorBrancos + "voto(s)");
+        System.out.println("Votos nulos = " + votosNulos + "voto(s)");
+
+
+
+    }
+}

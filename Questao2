@@ -1,0 +1,48 @@
+package br.edu.univas;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Questao2 {
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+
+        int vitoria = 0;
+        int derrota = 0;
+        int empate = 0;
+
+        int[] golsBrasil = new int[3];
+        int[] golsadversario = new int[3];
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("digite o resultado do jogo: ");
+            System.out.println("-----------------");
+
+            System.out.println("Brasil: ");
+            golsBrasil[i] = leitura.nextInt();
+
+
+            System.out.println("adversario: ");
+            golsadversario[i] = leitura.nextInt();
+
+            if (golsadversario[i] > golsBrasil[i]) {
+                derrota++;
+            } else if (golsadversario == golsBrasil) {
+                empate++;
+            } else {
+                vitoria++;
+            }
+
+
+        }
+        int saldo = (golsBrasil[0] + golsBrasil[1] + golsBrasil[2]) - (golsadversario[0] + golsadversario[1] + golsadversario[2]);
+
+        System.out.println("Vitorias: " + vitoria);
+        System.out.println("Derrotas: " + derrota);
+        System.out.println("Empates: " + empate);
+        System.out.println("saldo de gols: " + saldo);
+    }
+}
+
+
+
